@@ -1,0 +1,23 @@
+.properties__container {
+    margin: 1rem 0;
+}
+
+@media(min-width: 425px) {
+  .properties__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media(min-width: 992px) {
+    .properties__container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media(min-width: 1200px) {
+    .properties__container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .gallery {
+        height: 28rem;
+    }
+}

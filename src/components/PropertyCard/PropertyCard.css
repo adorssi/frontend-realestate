@@ -1,0 +1,123 @@
+.property__card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 5px 5px 30px #00000024;
+    margin: 1rem 0;
+    max-width: 400px;
+}
+.property__card-images {
+    display: flex;
+    justify-content: center;
+}
+.gallery {
+    display: flex;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 2.5rem;
+    width: 100%;
+    height: 325px;
+}
+.gallery-item {
+    object-fit: cover;
+}
+.property__card-tags {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+.tag {
+    gap: .3rem;
+    padding: .2rem .4rem;
+    border-radius: 25px;
+    display: flex;
+}
+.location {
+    background-color: #c5f2f9;
+    color: #0553a2eb;
+}
+.location p,
+.location-icon,
+.operation p {
+    font-size: 1.4rem;
+}
+.location-icon,
+.operation-icon {
+    width: 2.3rem;
+}
+.operation {
+    background-color: #ffec0b73;
+    color: #857b02;
+}
+.title {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+h2.property-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.ref {
+    flex: 33%;
+    display: block;
+    background-color: #b8efb8;
+    color: #147a14;
+    font-size: 1.3rem;
+    max-width: 8rem;
+}
+.main-amenities {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+.main-amenities article {
+    display: flex;
+    gap: .4rem;
+    align-items: center;
+}
+.main-amenities article i {
+    color: #646464;
+    font-size: 2.5rem;
+}
+.main-amenities article p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: black;
+}
+.end-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    min-height: 3rem;
+    position: relative;
+}
+.price-fields {
+    display: flex;
+    gap: .2rem;
+    font-weight: 500;
+    text-align: right;
+    border: 1px solid #0a81e3;
+    border-radius: 5px;
+    padding: .4rem;
+    justify-content: center;
+    position: absolute;
+    right: .5rem;
+}
+.price-fields span {
+    color: #0a81e3;
+}
+.financing {
+    background-color: #ee9696;
+    color: #9e0303;
+    border-radius: 15px;
+    padding: 0 .6rem;
+}
+@media(min-width: 425px) {
+    .property__card {
+      margin: 1rem;
+    }
+  }
