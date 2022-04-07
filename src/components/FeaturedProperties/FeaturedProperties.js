@@ -68,8 +68,8 @@ function FeaturedProperties() {
         <h2>Destacadas</h2>
       </div>
       <div className='properties__container'>
-
-        {
+      <PropertyCard />
+        {/* {
           properties.map((property, i) => 
             <PropertyCard
               key= {property + i}
@@ -87,7 +87,7 @@ function FeaturedProperties() {
               financing= {property.financing}
             />
           )
-        }
+        }  */}
 
       </div>
     </div>

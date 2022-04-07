@@ -18,6 +18,6 @@
       grid-template-columns: repeat(4, 1fr);
     }
     .gallery {
-        height: 28rem;
+        height: 24rem;
     }
 }
