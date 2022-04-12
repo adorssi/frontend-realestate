@@ -3,6 +3,21 @@ import { useState, useEffect } from 'react';
 import PropertyCard from '../PropertyCard/PropertyCard';
 import './FeaturedProperties.css';
 
+// Ejemplo con axios
+// useEffect(() => {
+//   const fetchData = async () => {
+//     try {
+//       const result = await axios(
+//         'https://api.myjson.com/bins/1g6j0f'
+//       );
+//       setProperties(result.data);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   }
+//   fetchData();
+// }, []);
+
 function FeaturedProperties() {
 
   const [error, setError] = useState(null);
@@ -46,10 +61,10 @@ function FeaturedProperties() {
               city= {property.city.name}
               operation= {property.operationType}
               refer= {property.ref}
-              // mainImage= {property.mainImage}
-              // imageGallery= {property.imageGallery}
+              mainImage= {property.mainImage}
+              gallery= {JSON.parse(property.gallery)}
               bedrooms= {property.bedrooms}
-              toilet= {property.toilets}
+              toilets= {property.toilets}
               garage= {property.garage}
               currency= {property.currency.symbol}
               price= {property.price}
