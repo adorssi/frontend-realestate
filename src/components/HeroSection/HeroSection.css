@@ -1,6 +1,7 @@
 .hero__section {
     height: 100vh;
     position: relative;
+    top: 7rem;
     background-image: url('../../images/bg-home_mobile.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -31,6 +32,7 @@ h1.hero_title {
     font-weight: 700;
     color: #fff;
     position: absolute;
+    padding: 0 2rem;
 }
 .hero__section-bgImage {
     display: none;
@@ -45,6 +47,7 @@ h1.hero_title {
     .hero__section {
         background: none;
         display: flex;
+        top: 1rem;
     }
 
     .hero__section-bgImage img {

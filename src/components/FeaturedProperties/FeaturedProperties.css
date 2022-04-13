@@ -4,7 +4,9 @@
     place-items: center;
     row-gap: 2rem;
 }
-
+.featured__title {
+  padding: 2rem;
+}
 @media(min-width: 630px) {
   .properties__container {
     grid-template-columns: repeat(2, 1fr);

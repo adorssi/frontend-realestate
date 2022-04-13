@@ -19,3 +19,8 @@ ul.slider-container li {
     height: 100%;
     min-width: 290px;
 }
+.property__detail-images ul.slider-container li {
+    list-style: none;
+    width: 100%;
+    min-width: 100%;
+}

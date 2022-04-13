@@ -1,4 +1,10 @@
 .main__container {
-    margin: 10rem auto;
+    margin: 15rem auto;
     padding: 1rem;
+}
+
+@media (min-width: 1024px) {
+    .main__container {
+        margin: 10rem auto;
+    }
 }

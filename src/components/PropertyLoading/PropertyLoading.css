@@ -1,0 +1,55 @@
+.loading {
+    padding-top: 10rem;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .loading__image {
+    height: 30rem;
+    background-color: #80808033;
+    margin: 0 auto;
+    border-radius: 2rem;
+    animation: loading 2s ease-in-out infinite;
+  }
+  .loading__badges {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+  span#operation, span#ref, .loading__city {
+    width: 7rem;
+    height: 2.5rem;
+    background-color: #80808033;
+    border-radius: 2rem;
+    animation: loading 2s ease-in-out infinite;
+  }
+  .loading__title {
+    height: 1.8rem;
+    background-color: #80808033;
+    border-radius: 2rem;
+    margin: 2rem 0;
+    animation: loading 2s ease-in-out infinite;
+  }
+  .w50 {
+    width: 50%;
+  }
+  .loading__details {
+    padding: 2rem 0;
+  }
+  .loading__details__item {
+    height: 1rem;
+    background-color: #80808033;
+    margin: 1rem 0;
+    border-radius: 2rem;
+    animation: loading 2s ease-in-out infinite;
+  }
+  @keyframes loading {
+    0% {
+      background-color: #80808033;
+    }
+    50% {
+      background-color: #80808066;
+    }
+    100% {
+      background-color: #80808033;
+    }
+  }

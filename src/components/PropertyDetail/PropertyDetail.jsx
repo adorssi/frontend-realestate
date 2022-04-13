@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Badge from "../Badge/Badge";
 import { LocationMarkerIcon, MapIcon } from "@heroicons/react/outline";
-import {FaCar} from 'react-icons/fa';
+import { FaCar } from "react-icons/fa";
 import { FaToilet, FaBed } from "react-icons/fa";
 import "./PropertyDetail.css";
+import PropertyLoading from "../PropertyLoading/PropertyLoading";
+import ImageGallery from "../ImageGallery/ImageGallery";
+import GoogleMaps from "../GoogleMap/GoogleMap";
 
 function PropertyDetail() {
   let [searchParams, setSearchParams] = useSearchParams();
@@ -26,7 +29,7 @@ function PropertyDetail() {
   }, []);
 
   if (!isLoaded) {
-    return <div>Loading...</div>;
+    return <PropertyLoading />;
   }
 
   if (property.length !== 0) {
@@ -35,14 +38,15 @@ function PropertyDetail() {
     return (
       <div className="property__detail">
         <div className="property__detail-images">
-          {gallery &&
+          <ImageGallery images={gallery} />
+          {/* {gallery &&
             gallery.map((image, i) => (
               <img
                 key={i + image}
                 src={process.env.REACT_APP_IMAGES_URL + image.src}
                 alt="Imagen de la propiedad"
               />
-            ))}
+            ))} */}
         </div>
         <main className="property__info">
           <div className="property__info-badges">
@@ -71,21 +75,21 @@ function PropertyDetail() {
           <section className="property__info-icons">
             {property.bedrooms > 0 && (
               <div className="bedrooms">
-                <FaBed className="amenitie-icon" />
+                <span className="material-icons">bed</span>
                 <p>{property.bedrooms}</p>
               </div>
             )}
 
             {property.toilets > 0 && (
               <div className="bedrooms">
-                <FaToilet className="amenitie-icon" />
+                 <span className="material-icons">bathroom</span>
                 <p>{property.toilets}</p>
               </div>
             )}
 
             {property.garage > 0 && (
               <div className="bedrooms">
-                <FaCar className="amenitie-icon" />
+                 <span className="material-icons">garage</span>
                 <p>{property.garage}</p>
               </div>
             )}
@@ -110,16 +114,40 @@ function PropertyDetail() {
                 margin: "1rem auto",
               }}
             ></div>
+            <div className="property__info-amenities-list">
+              {property.amenitie &&
+                property.amenitie.map((amenity, i) => (
+                  <div key={i + amenity} className="amenitie">
+                    <span className="material-icons">{amenity.icon}</span>
+                    <span>{amenity.name}</span>
+                  </div>
+                ))}
+            </div>
+          </section>
+          <section className="property__info-map">
+              <GoogleMaps
+                lat={-33.879763}
+                lng={-58.418557}
+                propertyTitle={property.title}
+                propertyCurrency={property.currency.symbol}
+                propertyPrice={property.price}
+              />
           </section>
         </main>
-        <div className="price__fields">
-          <span className="price__fields-currency">
-            {property.currency.symbol}
-          </span>
-          <span className="price__fields-price">
-            {parseInt(property.price)}
-          </span>
-        </div>
+        <section className="price__fields">
+          <div className="price__fields-price">
+            <span className="price__fields-currency">
+              {property.currency.symbol}
+            </span>
+            <span className="price__fields-price">
+              {parseInt(property.price)}
+            </span>
+          </div>
+          <div className="price__fields-actions">
+            <span className="material-icons">whatsapp</span>
+          </div>
+
+        </section>
       </div>
     );
   }

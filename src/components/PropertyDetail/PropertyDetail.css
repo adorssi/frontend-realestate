@@ -102,18 +102,35 @@ section.property__info-location.tag span {
     color: #838181;
     text-align: left;
 }
+.property__info-amenities-list .amenitie {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1rem 0;
+}
 .price__fields {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 90%;
     margin: 0 auto;
     gap: .4rem;
-    font-size: 3rem;
+    font-size: 2.4rem;
     font-weight: 600;
     padding: .5rem 0;
     border-top: 1px solid #e0e0e0;
     background-color: #fff;
     position: sticky;
     bottom: 0;
+    z-index: 10;
+}
+.price__fields-actions {
+    border-radius: 4rem;
+    padding: .5rem;
+    background: linear-gradient(45deg, #e91e63b8, #a200b696);
+    display: flex;
+}
+.price__fields-actions span {
+    font-size: 4.5rem;
+    color: #f7eded;
 }

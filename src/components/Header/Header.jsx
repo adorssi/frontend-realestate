@@ -9,9 +9,11 @@ function Header() {
   return (
     <header className="header">
         <div className='header__container'>
-            <div className='header__container-logo'>
-                <img src={logo} alt='Logo' />
-            </div>
+            <Link to='/'>
+                <div className='header__container-logo'>
+                    <img src={logo} alt='Logo' />
+                </div>
+            </Link>
             <div className='header__container-menu'>
                 <ul>
                     <li>Inicio</li>
