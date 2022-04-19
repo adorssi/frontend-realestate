@@ -6,7 +6,7 @@
     position: fixed;
     width: 100%;
     background-color: #ffffffed;
-    z-index: 100;
+    z-index: 10000;
 }
 .header__container {
     height: 5rem;

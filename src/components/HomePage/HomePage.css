@@ -1,10 +1,33 @@
 .main__container {
     margin: 15rem auto;
     padding: 1rem;
+    overflow: hidden;
+    width: 90%;
 }
 
 @media (min-width: 1024px) {
     .main__container {
         margin: 10rem auto;
     }
+}
+.filter__city-title {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
+    overflow: scroll;
+}
+.filter__city-title::-webkit-scrollbar {
+    display: none;
+}
+.filter__city-item {
+    padding: 1rem;
+    border-radius: 3rem;
+    color: #767373;
+    font-size: 1.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btnActive {
+    background-color: #7b1485;
+    color: #fff;
 }

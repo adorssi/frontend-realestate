@@ -1,8 +1,9 @@
 .properties__container {
-    margin: 1rem 0;
-    display: grid;
-    place-items: center;
-    row-gap: 2rem;
+  margin: 1rem 0;
+  display: grid;
+}
+.properties__container::-webkit-scrollbar {
+  display: none;
 }
 .featured__title {
   padding: 2rem;
@@ -10,6 +11,10 @@
 @media(min-width: 630px) {
   .properties__container {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-item {
+    max-height: 28rem;
+    height: 100%;
   }
 }
 @media(min-width: 992px) {

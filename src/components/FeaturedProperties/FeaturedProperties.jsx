@@ -3,28 +3,13 @@ import { useState, useEffect } from 'react';
 import PropertyCard from '../PropertyCard/PropertyCard';
 import './FeaturedProperties.css';
 
-// Ejemplo con axios
-// useEffect(() => {
-//   const fetchData = async () => {
-//     try {
-//       const result = await axios(
-//         'https://api.myjson.com/bins/1g6j0f'
-//       );
-//       setProperties(result.data);
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   }
-//   fetchData();
-// }, []);
-
 function FeaturedProperties() {
 
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [properties, setProperties] = useState([]);
 
-  const url = `${process.env.REACT_APP_API_URL}/api/property/featured`;
+  const url = `${process.env.REACT_APP_API_URL}/api/property?featured=true`;
 
 	useEffect(() => {
 		  fetch(url)
@@ -71,6 +56,7 @@ function FeaturedProperties() {
               price= {property.price}
               showPrice= {property.showPrice}
               financing= {property.financing}
+              featured= {property.featured}
             />
           )
         } 

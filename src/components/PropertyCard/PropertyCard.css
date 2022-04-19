@@ -2,23 +2,28 @@ a {
     text-decoration: none;
 }
 .property__card {
-    background-color: #fff;
-    padding: 1rem;
+    background-color: #fffdfd;
     padding-bottom: 3rem;
     border-radius: 15px;
-    box-shadow: 5px 5px 30px #00000024;
+    /* box-shadow: 5px 5px 30px #00000024; */
     margin: 1rem 0;
-    max-width: 310px;
-    height: 100%;
+    max-width: 100%;
     position: relative;
 }
+.featured-property {
+    position: absolute;
+    z-index: 100;
+    right: 2rem;
+    color: #f7ee37;
+    font-size: 36px;
+}
 .property__card:hover {
-    box-shadow: 5px 5px 30px #484545a1;
+    box-shadow: 1px -1px 17px 0px #484545a1;
     cursor: pointer;
 }
 .property__card-images {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 .property__card-tags {
     display: flex;
@@ -62,7 +67,7 @@ h2.property-title {
     text-transform: capitalize;
 }
 .ref {
-    flex: 33%;
+    flex: 50%;
     display: block;
     background-color: #b8efb8;
     color: #147a14;
@@ -72,7 +77,8 @@ h2.property-title {
 .main-amenities {
     display: flex;
     justify-content: space-around;
-    margin: 2rem 0;
+    margin: 1rem 0;
+    padding: 3rem 0;
 }
 .main-amenities article {
     display: flex;
@@ -96,6 +102,7 @@ h2.property-title {
     position: absolute;
     min-height: 25px;
     bottom: 1rem;
+    padding: 0 1rem;
 }
 .price-fields {
     display: flex;
@@ -142,4 +149,7 @@ fill: white;
 }
 .gallery__buttons--show {
     opacity: 1;
+}
+.property__card-info {
+    padding: 0 1rem;
 }

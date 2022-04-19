@@ -1,10 +1,13 @@
+/* body {
+    background-color: #fff!important;
+} */
 .property__detail {
     margin: 0 auto;
     padding-top: 10rem;
 }
 
 .property__detail-images {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
     border-radius: 2rem;
     display: flex;
@@ -15,14 +18,28 @@
 .property__detail-images img {
     min-width: 100%;
     height: 100%;
+    max-height: 70rem!important;
 }
 
 main.property__info {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     margin-top: -2rem;
-    padding: 4rem 1rem;
+    padding-top: 4rem;
     background-color: #fff;
+}
+section.property__info-col1 {
+    width: 80%;
+    margin: 0 auto;
+}
+section.fblock,
+section.property__info-detail,
+section.property__info-amenities,
+section.price__fields {
+    margin: 2rem 0;
+    border: 1px solid #80808057;
+    padding: 2.2rem;
+    border-radius: 25px;
 }
 .property__info-badges {
     display: flex;
@@ -112,7 +129,7 @@ section.property__info-location.tag span {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     gap: .4rem;
     font-size: 2.4rem;
@@ -124,6 +141,10 @@ section.property__info-location.tag span {
     bottom: 0;
     z-index: 10;
 }
+.price__fields-price {
+    display: flex;
+    gap: .5rem;
+}
 .price__fields-actions {
     border-radius: 4rem;
     padding: .5rem;
@@ -133,4 +154,37 @@ section.property__info-location.tag span {
 .price__fields-actions span {
     font-size: 4.5rem;
     color: #f7eded;
+}
+.rural {
+    display: flex;
+    background: linear-gradient(45deg, #4ccb15, #107805);
+    border-radius: 20px;
+    padding: 0 1rem;
+    color: #fff;
+}
+.rural span {
+    background: none!important;
+}
+@media (min-width: 992px) {
+    main.property__info {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        gap: 1rem;
+        grid-template-rows: repeat(3, auto);
+    }
+    section.property__info-map {
+        grid-row: 2 / 3;
+        grid-column: 1 / 3;
+    }
+    section.price__fields {
+        max-height: 40rem;
+        width: 80%;
+        align-items: flex-start;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 10rem;
+    }
+    .property__info-icons {
+        border-bottom: none;
+    }
 }

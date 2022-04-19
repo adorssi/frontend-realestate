@@ -13,16 +13,25 @@ function PropertyCard(props) {
 
         return (
             <Link to={`/property/detail?PID=${id}&title=${slug}`} className='property__card'>
+                {
+                    featured &&
+                    <span className="material-icons featured-property">bookmark</span>
+                }
                 <div className='property__card-images'>
                     <div className='gallery'>
                         <div className='gallery__buttons'>
 
                         </div>
-                        <ImageGallery 
+                        <img
+                            className="gallery-item"
+                            src={process.env.REACT_APP_IMAGES_URL + '1.webp'}
+                            alt="Imagen de la propiedad"
+                        />
+                        {/* <ImageGallery 
                             className={'class' + id}
                             uniqueID={'class' + id}
                             images={gallery}
-                        />
+                        /> */}
                         {/* <img className='gallery-item' src={mainImage} width='100%' alt='Imagen Propiedad' />
                     
                         {
